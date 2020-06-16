@@ -5,10 +5,12 @@ import './UserItem.css'
 import Avatar from '../../shared/components/UIElements/Avatar';
 import Card from '../../shared/components/UIElements/Card';
 
+//Generates an unordered list item for each User 
 const UserItem = (props) => {
   return (
     <li className='user-item'>
       <Card className='user-item__content'>
+        {/*Links everything enclosed to the corresponding Route path component*/}
         <Link to={`/${props.id}/places`}>
           <div className='user-item__image'>
             <Avatar image={props.image} alt={props.name}/>

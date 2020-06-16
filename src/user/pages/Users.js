@@ -3,6 +3,7 @@ import React from 'react';
 import UsersList from '../components/UsersList';
 
 const Users = () => {
+  //Dummy data in lieu of database connection 
   const USERS = [
     {
     id: 'u1',
@@ -11,7 +12,7 @@ const Users = () => {
     places: 3,
     }
 ];
-
+  //Props passed is dummy data for now 
   return <UsersList items={USERS}/>
 };
 

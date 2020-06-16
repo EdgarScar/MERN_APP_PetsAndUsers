@@ -6,6 +6,7 @@ import NavLinks from './NavLinks';
 import SideDrawer from './SideDrawer';
 import './MainNavigation.css'
 
+//Main component to render all header components 
 const MainNavigation = props => {
   return (
     <Fragment>
