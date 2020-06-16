@@ -4,7 +4,9 @@ import UserItem from './UserItem';
 import Card from '../../shared/components/UIElements/Card'
 import './UsersList.css';
 
+//Generates an unordered list of UserItems 
 const UsersList = props => {
+  //Check if users exist 
   if (props.items.length === 0){
     return (
       <div className="center">
@@ -14,8 +16,10 @@ const UsersList = props => {
       </div>
     );
   };
+  //Return unordered list of UserItems 
   return (
   <ul>
+    {/*Array of User Objects is mapped to generate individual UserItems with props*/}
      {props.items.map(user =>
         <UserItem 
         key={user.id} 

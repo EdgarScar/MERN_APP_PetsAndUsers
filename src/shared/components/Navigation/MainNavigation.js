@@ -5,6 +5,7 @@ import MainHeader from './MainHeader'
 import NavLinks from './NavLinks';
 import './MainNavigation.css'
 
+//Main component to render all header components 
 const MainNavigation = props => {
   return (
     <MainHeader>
