@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useState } from 'react';
 import { Link } from 'react-router-dom'
 ;
 import MainHeader from './MainHeader'
@@ -8,15 +8,30 @@ import './MainNavigation.css'
 
 //Main component to render all header components 
 const MainNavigation = props => {
+  //State for conditional SideDrawer component display 
+  const [drawerIsOpen, setDrawerIsOpen] = useState(false);
+
+  //Handler switches for conditional SideDrawer component display 
+  const openDrawer = () => {
+    setDrawerIsOpen(true)
+  };
+
+  const closeDrawer = () => {
+    setDrawerIsOpen(false)
+  };
+
   return (
     <Fragment>
-      <SideDrawer>
+      {/*Conditional SideDrawer content to be displayed if true, else null*/}
+       {drawerIsOpen && 
+       <SideDrawer>
         <nav className='main-navigation__drawer-nav'>
           <NavLinks />
         </nav>
-      </SideDrawer>
+      </SideDrawer>}
       <MainHeader>
-        <button className="main-navigation__menu-btn">
+        {/*Creates hamburger button menu*/}
+        <button className="main-navigation__menu-btn" onClick={openDrawer}>
           <span />
           <span />
           <span />
