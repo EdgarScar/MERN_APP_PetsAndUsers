@@ -5,6 +5,7 @@ import MainHeader from './MainHeader'
 import NavLinks from './NavLinks';
 import SideDrawer from './SideDrawer';
 import './MainNavigation.css'
+import Backdrop from '../UIElements/Backdrop';
 
 //Main component to render all header components 
 const MainNavigation = props => {
@@ -22,6 +23,8 @@ const MainNavigation = props => {
 
   return (
     <Fragment>
+      {/*Conditional SideDrawer backdrop to be clickable to close the SideDrawer*/}
+      {drawerIsOpen && <Backdrop onClick={closeDrawer}/>}
       {/*Conditional SideDrawer content to be displayed if true, else null*/}
        {drawerIsOpen && 
        <SideDrawer>
