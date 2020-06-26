@@ -11,7 +11,7 @@ function App() {
   <Router>
     <MainNavigation />
     <main>
-      {/*Swtich prevents subsequent rendering of paths that also match*/}
+      {/*Switch prevents subsequent rendering of paths that also match*/}
       <Switch>
           <Route path="/" exact >
             <Users /> 
